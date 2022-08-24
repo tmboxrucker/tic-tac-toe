@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Tic-Tac-Toe
+        </h1>
+    </div>
+    <div class="versus">
+        <h2>
+            Player 1 vs Computer
+        </h2>
+    </div>
+    <div class="content">
+        <div class="contentContainer">
+            <div id="0" class="square"></div>
+            <!-- <div class="gridLineVertical gridLine"></div> -->
+            <div id="1" class="square"></div>
+            <!-- <div class="gridLineVertical gridLine"></div> -->
+            <div id="2" class="square"></div>
+
+            <!-- <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div> -->
+
+            <div id="3" class="square"></div>
+            <!-- <div class="gridLineVertical gridLine"></div> -->
+            <div id="4" class="square"></div>
+            <!-- <div class="gridLineVertical gridLine"></div> -->
+            <div id="5" class="square"></div>
+
+            <!-- <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div>
+            <div class="gridLineHorizontal gridLine"></div> -->
+
+            <div id="6" class="square"></div>
+            <!-- <div class="gridLineVertical gridLine"></div> -->
+            <div id="7" class="square"></div>
+            <!-- <div class="gridLineVertical gridLine"></div> -->
+            <div id="8" class="square"></div>
+        </div>
+    </div>
+    <div class="footer">
+        Page made by Troy Boxrucker 2022
+    </div>
+    <div class="modal active" id="modal">
+        <form class="modalForm" onsubmit="return false" action="">
+            <div class="nameForm"><label for="modalName">Player Name: </label><input id="modalName" type="text" placeholder="Player 1"></div>
+            <div class="buttonForm">
+                <button class="btn selected" id="btnX" onclick="Player(this).selectPlayer()">X</button>
+                <button class="btn" id="btnO" onclick="Player(this).selectPlayer()">O</button>
+            </div>
+            <div class="difficulty">
+                <select name="difficult" id="difficult">
+                    <option value="easy">Easy</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button class="btn modalSubmit" type="submit" onclick="Player(document.getElementsByClassName('selected')[0]).submitPlayerChoice(this)">Confirm</button>
+        </form>
+    </div>
+
+    <div class="overlay active" id="overlay"></div>
+    <div class="computerOverlay" id="computerOverlay"></div>
+</body>
+<script src="index.js"></script>
+</html>
