@@ -45,7 +45,6 @@ h2 {
     justify-items: center;
     align-items: center;
     display: grid;
-    /* grid-template: 100px auto 100px auto 100px / 100px auto 100px auto 100px; Use this if lines are desired*/
     grid-template: 100px 100px 100px / 100px 100px 100px;
     padding: 50px 0px;
     font-size: 100px;
@@ -76,7 +75,7 @@ h2 {
     user-select: none;
 }
 
-.square:hover {
+.square:hover, .modalSubmit:hover {
     transform: scale(1.1);
 }
 
@@ -84,33 +83,6 @@ h2 {
     transform: scale(1);
     opacity: 90%;
 }
-
-
-/* If lines are desired */
-/* .gridLine {                                  
-    background-color: var(--primary-dark);
-}
-
-.gridLineVertical {
-    width: 5px;
-    height: 100%;
-}
-
-.gridLineHorizontal {
-    height: 5px;
-    width: 100%;
-} */
-
-/* #difficult {
-    width: 150px;
-    font-size: large;
-    text-align: center;
-    padding: 5px;
-    background-color: var(--primary-dark);
-    color: var(--primary-light);
-    border-radius: 5px;
-    border: 2px solid rgba(30,30,30);
-} */
 
 .footer {
     position: relative;
@@ -166,7 +138,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.btn, #difficult, #modalName {
+.btn, #difficult, #modalName{
     text-align: center;
     width: 150px;
     padding: 5px;
@@ -177,11 +149,15 @@ h2 {
     font-size: large;
 }
 
-.nameForm {
+.nameForm{
     display: flex;
     align-items: center;
     width: 100%;
     gap: 5px;
+    font-size: large;
+}
+
+p {
     font-size: large;
 }
 
